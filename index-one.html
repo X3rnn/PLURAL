@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLURAL</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/plural.png" />
+  <link rel="stylesheet" href="css/index.css" />
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .center-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .center-logo img {
+      max-width: 90%;
+      height: auto;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .center-logo {
+        top: 40%;
+      }
+    }
+
+    .headphone {
+      position: fixed;
+      left: 4%;
+      bottom: 3%;
+      z-index: 5;
+    }
+
+    .headphone img {
+      height: 100px;
+    }
+
+    /* ✅ Bottom-left horizontal links */
+    #social-media-links-bottom {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 10000;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 20px;
+      pointer-events: auto;
+    }
+
+    #social-media-links-bottom ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #social-media-links-bottom li {
+      display: inline;
+    }
+
+    #social-media-links-bottom a {
+      color: white;
+      text-decoration: none;
+      pointer-events: auto;
+      z-index: 10000;
+    }
+
+    .cursor,
+    .cursor-two,
+    .project-preview {
+      pointer-events: none !important;
+    }
+  </style>
+</head>
+<body>
+  <main id="index-one">
+    <div class="cursor scale"></div>
+    <div class="cursor-two scale"></div>
+
+    <div id="preloader">
+      <div class="p">
+        <img src="images/no-bg-plural.png" alt="headphone" />
+        Malsyian Culture Arts
+      </div>
+    </div>
+
+    <div class="center-logo img">
+      <img src="images/no-bg-plural.png" alt="PLURAL Logo" />
+    </div>
+
+    <div class="navigation">
+      <div class="logo hover">
+        <a href="#" class="text">PLURAL</a>
+      </div>
+      <div class="menu-bar hover">
+        <div class="menu-bar-name text">Menu</div>
+        <div class="menu-bar-lines text">
+          <div class="menu-bar-line"></div>
+          <div class="menu-bar-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="header">
+      <div class="navigation">
+        <div class="logo hover">
+          <a href="#" class="text">PLURAL</a>
+        </div>
+        <div class="menu-bar hover">
+          <div class="menu-bar-name text">Menu</div>
+          <div class="menu-bar-lines text">
+            <div class="menu-bar-line"></div>
+            <div class="menu-bar-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Social media links at bottom left, horizontal -->
+      <div id="social-media-links-bottom">
+        <ul>
+          <li><a href="https://instagram.com/dacernn" target="_blank">IG</a></li>
+          <li><a href="https://instagram.com/dacernn" target="_blank">FB</a></li>
+          <li><a href="https://instagram.com/dacernn" target="_blank">YT</a></li>
+        </ul>
+      </div>
+
+
+      <div class="new-release img text">
+        <img src="images/bg-index.jpg" alt="new-release" />
+        <div class="song-details">
+          <div class="song-name">Anyaman Langit</div>
+          <div class="singer-name">UNIVORSO</div>
+          <div class="music-player">
+            <div class="play-song"></div>
+            <div class="all-songs">
+              <a href="songs-one.html" title="All Songs"><i class="gg-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation-content">
+      <div class="navigation-logo hover opacity">
+        <a href="#" class="text">PLURAL</a>
+      </div>
+      <ul class="navigation-ul">
+        <li><a href="index-one.html" data-text="Home" data-img="images/home-nav.jpg">Home</a></li>
+        <li><a href="about-one.html" data-text="About" data-img="images/about-nav.jpg">About</a></li>
+        <li><a href="arts.html" data-text="Arts" data-img="images/arts-nav.jpg">Arts</a></li>
+        <li><a href="blog-one.html" data-text="Blogs" data-img="images/blog-nav.jpg">Blogs</a></li>
+        <li><a href="contact-one.html" data-text="Contact" data-img="images/con-nav.jpg">Contact</a></li>
+      </ul>
+      <div class="navigation-close hover about-close opacity">
+        <div class="navigation-close-line"></div>
+        <div class="navigation-close-line"></div>
+      </div>
+      <div class="project-preview"></div>
+    </div>
+  </main>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bez.js"></script>
+  <script src="js/pace.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

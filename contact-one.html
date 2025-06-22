@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLURAL</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/plural.png" />
+  <link rel="stylesheet" href="css/index.css" />
+  <style>
+    /* You can also move this to your index.css file */
+    #message {
+      color: red;
+      font-size: 14px;
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<main id="contact-one">
+
+  <div class="cursor scale"></div>
+  <div class="cursor-two scale"></div>
+
+  <div id="preloader">
+    <div class="p">
+      <img src="images/no-bg-plural.png" alt="headphone">
+      Malsyian Culture Arts
+    </div>
+  </div>
+
+  <div id="contact-one-content">
+
+    <div class="navigation">
+      <div class="logo hover ">
+        <a href="index-two.html" class="text">PLURAL</a>
+      </div>
+      <div class="menu-bar hover ">
+        <div class="menu-bar-name text">Menu</div>
+        <div class="menu-bar-lines text">
+          <div class="menu-bar-line"></div>
+          <div class="menu-bar-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="heading">
+      <div class="text">CONTACT</div>
+    </div>
+
+    <div id="flex-row">
+
+      <div id="contact-form">
+        <div id="form" class="opacity-contact">
+          <form id="myForm" action="#">
+            <div class="input-line">
+              <input id="name" type="text" placeholder="NAME" class="input-same-line" required />
+              <input id="email" type="email" placeholder="EMAIL" class="input-same-line" required />
+            </div>
+            <div class="input-line-column">
+              <input id="subject" type="text" placeholder="SUBJECT" required />
+              <textarea name="textarea" id="body" class="textarea" placeholder="MESSAGE" required></textarea>
+            </div>
+            <button type="button" id="submit" class="hover">Send</button>
+            <div id="message">INVALID EMAIL</div>
+          </form>
+        </div>
+      </div>
+
+      <div id="collaboration-mail" class="opacity-contact">
+        <div class="circular-text">
+          <span id="rotated">FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp; FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <div class="mail">
+          <a href="mailto:dacern888@gmail.com">DACERN888@GMAIL.COM</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="headphone img text">
+      <img src="images/no-bg-plural.png" title="headphone zone" class="text" alt="headphone">
+    </div>
+
+    <div class="progress-bar-container fade-in">
+      <div class="progressbar"></div>
+    </div>
+  </div>
+
+  <div class="navigation-content">
+    <div class="navigation-logo hover opacity">
+      <a href="#" class="text">PLURAL</a>
+    </div>
+    <ul class="navigation-ul">
+      <li><a href="index-one.html" data-text="Home" data-img="images/home-nav.jpg">Home</a></li>
+      <li><a href="about-one.html" data-text="About" data-img="images/about-nav.jpg">About</a></li>
+      <li><a href="songs-one.html" data-text="Arts" data-img="images/arts-nav.jpg">Arts</a></li>
+      <li><a href="blog-one.html" data-text="Blogs" data-img="images/blog-nav.jpg">Blogs</a></li>
+      <li><a href="contact-one.html" data-text="Contact" data-img="images/con-nav.jpg">Contact</a></li>
+    </ul>
+    <div class="navigation-close hover about-close opacity">
+      <div class="navigation-close-line"></div>
+      <div class="navigation-close-line"></div>
+    </div>
+
+    <div class="project-preview"></div>
+
+    <div class="headphone-navigation opacity">
+      <img src="images/no-bg-plural.png" title="headphone zone" class="text" alt="headphone">
+    </div>
+
+    <div class="social-media-links-navigation">
+      <ul>
+        <li><a href="#" class="text hover opacity">YT</a></li>
+        <li><a href="#" class="text hover opacity">FB</a></li>
+        <li><a href="#" class="text hover opacity">IG</a></li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/circletype.min.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="js/bez.js"></script>
+<script src="js/pace.js"></script>
+<script src="js/index.js"></script>
+
+<script>
+// Corrected JS for Send button functionality
+document.getElementById("submit").addEventListener("click", function () {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const body = document.getElementById("body").value.trim();
+  const errorMsg = document.getElementById("message");
+
+  if (!email.includes("@") || !name || !subject || !body) {
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  errorMsg.style.display = "none";
+
+  const mailtoLink = `mailto:dacern888@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + body)}`;
+
+  window.location.href = mailtoLink;
+});
+</script>
+
+</body>
+</html>
