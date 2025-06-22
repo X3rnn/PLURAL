@@ -9,6 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="images/plural.png" />
   <link rel="stylesheet" href="css/index.css" />
+  <style>
+    .navigation-content {
+  display: none;
+  /* your existing styles */
+}
+
+.navigation-content.active {
+  display: block;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000; /* or your original background */
+}
+
+  </style>
 </head>
 <body>
   <main id="about-one">
@@ -27,7 +45,7 @@
         <div class="logo hover">
           <a href="index-two.html" class="text">PLURAL</a>
         </div>
-        <div class="menu-bar hover">
+        <div class="menu-bar hover" id="menuToggle">
           <div class="menu-bar-name text">Menu</div>
           <div class="menu-bar-lines text">
             <div class="menu-bar-line"></div>
@@ -100,7 +118,7 @@
     </div>
   </main>
 
-  <div class="navigation-content">
+  <div class="navigation-content" id="navigationMenu">
     <div class="navigation-logo hover opacity">
       <a href="#" class="text">PLURAL</a>
     </div>
@@ -111,7 +129,7 @@
       <li><a href="blog-one.html" data-text="Blogs" data-img="images/blog-nav.jpg">Blogs</a></li>
       <li><a href="contact-one.html" data-text="Contact" data-img="images/con-nav.jpg">Contact</a></li>
     </ul>
-    <div class="navigation-close hover about-close opacity">
+    <div class="navigation-close hover about-close opacity" id="menuClose">
       <div class="navigation-close-line"></div>
       <div class="navigation-close-line"></div>
     </div>
@@ -135,5 +153,15 @@
   <script src="js/bez.js"></script>
   <script src="js/pace.js"></script>
   <script src="js/index.js"></script>
+
+  <!-- ✅ Mobile Menu Toggle Script -->
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      document.getElementById("navigationMenu").classList.add("active");
+    });
+    document.getElementById("menuClose").addEventListener("click", () => {
+      document.getElementById("navigationMenu").classList.remove("active");
+    });
+  </script>
 </body>
 </html>
