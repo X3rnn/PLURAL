@@ -1,273 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PLURAL</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="images/plural.png">
-        <link rel="stylesheet" href="css/index.css">
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLURAL</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/plural.png" />
+  <link rel="stylesheet" href="css/index.css" />
+  <style>
+    /* ✅ Mobile menu animation fix */
+    .navigation-content {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: black;
+      z-index: 999;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+      pointer-events: auto;
+    }
+
+    .navigation-content.open {
+      transform: translateY(0);
+    }
+  </style>
+</head>
 <body>
-    <main id="blog-single">
-        <div class="cursor scale"></div>
-        <div class="cursor-two scale"></div>
+<main id="blog-single">
 
-        <div id="preloader">
-            <div class="p">
-                <img src="images/no-bg-plural.png" alt="headphone">
-                Malaysian Cultural Arts
-            </div>
+  <div class="cursor scale"></div>
+  <div class="cursor-two scale"></div>
+
+  <div id="preloader">
+    <div class="p">
+      <img src="images/no-bg-plural.png" alt="headphone">
+      Malaysian Cultural Arts
+    </div>
+  </div>
+
+  <div id="blog-single-content">
+
+    <div class="navigation">
+      <div class="logo hover">
+        <a href="index-two.html" class="text">PLURAL</a>
+      </div>
+      <div class="menu-bar hover">
+        <div class="menu-bar-name text">Menu</div>
+        <div class="menu-bar-lines text">
+          <div class="menu-bar-line"></div>
+          <div class="menu-bar-line"></div>
         </div>
+      </div>
+    </div>
 
-        <div id="blog-single-content">
+    <div class="heading">
+      <div class="text">FEATURE ARTIST</div>
+    </div>
 
-            <div class="navigation">
-                <div class="logo hover ">
-                    <a href="index-two.html" class="text">PLURAL</a>
-                </div>
-                <div class="menu-bar hover ">
-                    <div class="menu-bar-name text">Menu</div>
-                    <div class="menu-bar-lines text">
-                        <div class="menu-bar-line"></div>
-                        <div class="menu-bar-line"></div>
-                    </div>
-                </div>
-            </div>
+    <!-- Eli Gee Section -->
+    <div class="center">
+      <div class="blog-img img">
+        <img src="images/ei-gee3.jpg" alt="blog-img">
+      </div>
 
-            <div class="heading">
-                <div class="text">FEATURE ARTIST</div>
-            </div>
+      <div class="center-para">
+        <div class="blog-text">
+          <div class="blog-info">
+            <div class="blog-date text-scroll">June 21, 2025</div>
+          </div>
 
-            <div class="center">
-                <div class="blog-img img">
-                    <img src="images/ei-gee3.jpg" alt="blog-img">
-                </div>
+          <div class="blog-heading text-scroll">Highlighting Eli Gee</div>
 
-                <div class="center-para">
-                    <div class="blog-text">
-                        <div class="blog-info">
-                            <div class="blog-date text-scroll">June 21, 2025</div>
-                            <div class="blog-duration img-scroll text-scroll">
-                               
-                            </div>
-                        </div>
+          <div class="para text-scroll">
+            Eli Gee is a rising Malaysian creative artist best known for her heartfelt, DIY-style projects that fuse illustration, craft, and introspection...
+          </div>
 
-                        <div class="blog-heading text-scroll">Highlighting Eli Gee</div>
+          <div class="para text-scroll">
+            In a world that often chases perfection, Eli’s art feels refreshingly grounded...
+          </div>
 
-                        <div class="para text-scroll">
-                            Eli Gee is a rising Malaysian creative artist best known for her heartfelt, DIY-style projects that fuse illustration, craft, and introspection. Her series "My Heart On Your Sleeve"—a collection of printed thoughts on clothing modeled by friends—resonates with raw honesty and emotional relatability. Eli’s work speaks to a generation of creators trying to express vulnerability through handmade mediums.
-                        </div>
+          <div class="blog-text-img">
+            <div class="img-scroll"><img src="images/ei-gee.jpg" alt="img"></div>
+            <div class="img-scroll"><img src="images/ei-gee 2.jpg" alt="img"></div>
+          </div>
 
-                        <div class="para text-scroll">
-                            In a world that often chases perfection, Eli’s art feels refreshingly grounded. From zines and poetry pieces to plushies and hand-drawn stickers, her pieces often find homes on platforms like Etsy and BigCartel. What sets her apart is the intimate connection she creates with her audience, blurring the lines between creator and community.
-                        </div>
+          <div class="para text-scroll italic">
+            <i>"Everything I make starts from a feeling—somewhere between being too much and not enough." — Eli Gee</i>
+          </div>
 
-                        <div class="blog-text-img">
-                            <div class="img-scroll">
-                                <img src="images/ei-gee.jpg" alt="img">
-                            </div>
-                            <div class="img-scroll">
-                                <img src="images/ei-gee 2.jpg" alt="img">
-                            </div>
-                        </div>
+          <div class="para text-scroll">
+            As a strong voice in Malaysia’s indie art scene, Eli Gee continues to inspire others to embrace imperfections...
+          </div>
 
-                        <div class="para text-scroll italic">
-                            <i>"Everything I make starts from a feeling—somewhere between being too much and not enough." — Eli Gee</i>
-                        </div>
-
-                        <div class="para text-scroll">
-                            As a strong voice in Malaysia’s indie art scene, Eli Gee continues to inspire others to embrace imperfections and share their authentic stories. Her journey proves that you don’t need a gallery to make an impact—just sincerity, a platform, and the courage to be seen.
-                        </div>
-
-                   
-
-                        <div class="signature">
-                            <span class="text-scroll">Eli Gee</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="headphone img text">
-                <img src="images/no-bg-plural.png" title="headphone zone" class="text" alt="headphone">
-            </div>
-
-            <div class="progress-bar-container fade-in">
-                <div class="progressbar"></div>
-            </div>
+          <div class="signature">
+            <span class="text-scroll">Eli Gee</span>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="navigation-content">
-            <div class="navigation-logo hover opacity">
-                <a href="#" class="text">PLURAL</a>
-            </div>
-<!DOCTYPE html>
-<html lang="en">
- <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PLURAL</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="images/plural.png">
-        <link rel="stylesheet" href="css/index.css">
-    </head>
-<body>
-    <main id="blog-single">
-        <div class="cursor scale"></div>
-        <div class="cursor-two scale"></div>
+    <!-- Jai Hassan Section -->
+    <div class="center">
+      <div class="blog-img img">
+        <img src="images/jai-blog1.png" alt="blog-img">
+      </div>
 
-        <div id="preloader">
-            <div class="p">
-                <img src="images/no-bg-plural.png" alt="headphone">
-                Malaysian Cultural Arts
-            </div>
+      <div class="center-para">
+        <div class="blog-text">
+          <div class="blog-info">
+            <div class="blog-date text-scroll">June 21, 2025</div>
+          </div>
+
+          <div class="blog-heading text-scroll">Highlighting Jaihassan</div>
+
+          <div class="para text-scroll">
+            Jaiahassan is a veteran figure in Malaysia’s contemporary art scene, known for his powerful mixed-media works...
+          </div>
+
+          <div class="para text-scroll">
+            Series like “Gagak Di Rimba” and “Mak Runsing Di Kemunting” evoke both nostalgia and unease...
+          </div>
+
+          <div class="blog-text-img">
+            <div class="img-scroll"><img src="images/jaiahassan1.png" alt="img"></div>
+            <div class="img-scroll"><img src="images/jaiahassan3.png" alt="img"></div>
+          </div>
+
+          <div class="para text-scroll italic">
+            <i>"My work is a conversation—between memory, identity, and the silence in between." — Jaiahassan</i>
+          </div>
+
+          <div class="para text-scroll">
+            As a respected figure in Malaysia’s contemporary art movement, Jaiahassan continues to challenge and reframe how we see our heritage...
+          </div>
+
+          <div class="signature">
+            <span class="text-scroll">Jai Hassan</span>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div id="blog-single-content">
+    <div class="headphone img text">
+      <img src="images/no-bg-plural.png" title="headphone zone" class="text" alt="headphone">
+    </div>
 
-            <div class="navigation">
-                <div class="logo hover ">
-                    <a href="index-two.html" class="text">PLURAL</a>
-                </div>
-                <div class="menu-bar hover ">
-                    <div class="menu-bar-name text">Menu</div>
-                    <div class="menu-bar-lines text">
-                        <div class="menu-bar-line"></div>
-                        <div class="menu-bar-line"></div>
-                    </div>
-                </div>
-            </div>
+    <div class="progress-bar-container fade-in">
+      <div class="progressbar"></div>
+    </div>
+  </div>
 
-            <div class="heading">
-                <div class="text">FEATURE ARTIST</div>
-            </div>
+  <div class="navigation-content">
+    <div class="navigation-logo hover opacity">
+      <a href="#" class="text">PLURAL</a>
+    </div>
 
-            <div class="center">
-                <div class="blog-img img">
-                    <img src="images/jai-blog1.png" alt="blog-img">
-                </div>
-
-                <div class="center-para">
-                    <div class="blog-text">
-                        <div class="blog-info">
-                            <div class="blog-date text-scroll">June 21, 2025</div>
-                            <div class="blog-duration img-scroll text-scroll">
-                               
-                            </div>
-                        </div>
-
-                        <div class="blog-heading text-scroll">Highlighting Jaihassan</div>
-
-                        <div class="para text-scroll">
-                          Jaiahassan is a veteran figure in Malaysia’s contemporary art scene, known for his powerful mixed-media works that blend tradition with critique. With a background shaped by global institutions like The Slade (UCL, London) and Pratt Institute (NYC), Jai brings an international eye to local narratives. His art—often gritty, layered, and emotionally charged—dives into Malay cultural identity, social unrest, and the spiritual weight of everyday life.
-                        </div>
-
-                        <div class="para text-scroll">
-                           Series like “Gagak Di Rimba” and “Mak Runsing Di Kemunting” evoke both nostalgia and unease, using symbols like birds, smoke, and kampung relics to spark reflection. Jai’s pieces feel like visual storytelling rooted in heritage but unafraid to question it. Whether through charcoal textures or found objects, his work speaks directly to a Malaysia in motion—complex, flawed, and deeply human. Beyond galleries and national collections, Jaiahassan is also a respected academic, shaping the next generation of Malaysian artists with the same sincerity and critical lens found in his own practice. His voice in art remains one of bold honesty, cultural interrogation, and unshakable passion.
-                        </div>
-
-                        <div class="blog-text-img">
-                            <div class="img-scroll">
-                                <img src="images/jaiahassan1.png" alt="img">
-                            </div>
-                            <div class="img-scroll">
-                                <img src="images/jaiahassan3.png" alt="img">
-                            </div>
-                        </div>
-
-                        <div class="para text-scroll italic">
-    <i>"My work is a conversation—between memory, identity, and the silence in between." — Jaiahassan</i>
-</div>
-
-<div class="para text-scroll">
-    As a respected figure in Malaysia’s contemporary art movement, Jaiahassan continues to challenge and reframe how we see our heritage. His journey reminds us that art isn’t just about beauty—it’s about provoking thought, preserving culture, and daring to question what we inherit.
-</div>
-
-
-                   
-
-                        <div class="signature">
-                            <span class="text-scroll">Jai Hassan</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="headphone img text">
-                <img src="images/no-bg-plural.png" title="headphone zone" class="text" alt="headphone">
-            </div>
-
-            <div class="progress-bar-container fade-in">
-                <div class="progressbar"></div>
-            </div>
-        </div>
-
-        <div class="navigation-content">
-            <div class="navigation-logo hover opacity">
-                <a href="#" class="text">PLURAL</a>
-            </div>
-            <ul class="navigation-ul">
-        <li><a href="index-one.html" data-text="Home" data-img="images/home-nav.jpg">Home</a></li>
-        <li><a href="about-one.html" data-text="About" data-img="images/about-nav.jpg">About</a></li>
-        <li><a href="songs-one.html" data-text="Arts" data-img="images/arts-nav.jpg">Arts</a></li>
-        <li><a href="blog-one.html" data-text="Blogs" data-img="images/blog-nav.jpg">Blogs</a></li>
-        <li><a href="contact-one.html" data-text="Contact" data-img="images/con-nav.jpg">Contact</a></li>
+ <ul class="navigation-ul">
+      <li><a href="index-one.html" data-text="Home" data-img="images/home-nav.jpg">Home</a></li>
+      <li><a href="about-one.html" data-text="About" data-img="images/about-nav.jpg">About</a></li>
+      <li><a href="arts.html" data-text="Arts" data-img="images/arts-nav.jpg">Arts</a></li>
+      <li><a href="blog-one.html" data-text="Blogs" data-img="images/blog-nav.jpg">Blogs</a></li>
+      <li><a href="contact-one.html" data-text="Contact" data-img="images/con-nav.jpg">Contact</a></li>
     </ul>
-            <div class="navigation-close hover about-close opacity">
-                <div class="navigation-close-line"></div>
-                <div class="navigation-close-line"></div>
-            </div>
 
-            <div class="project-preview"></div>
+    <div class="navigation-close hover about-close opacity">
+      <div class="navigation-close-line"></div>
+      <div class="navigation-close-line"></div>
+    </div>
 
-            <div class="headphone-navigation opacity">
-                <img src="images/no-bg-plural.png" title="headphone zone" class="text" alt="headphone">
-            </div>
+    <div class="project-preview"></div>
 
-            <div class="social-media-links-navigation">
-                <ul>
-                    <li><a href="#" class="text hover opacity">YT</a></li>
-                    <li><a href="#" class="text hover opacity">FB</a></li>
-                    <li><a href="#" class="text hover opacity">IG</a></li>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bez.js"></script>
-    <script src="js/pace.js"></script>
-    <script src="js/index.js"></script>
-</body>
-</html>
+    <div class="headphone-navigation opacity">
+      <img src="images/no-bg-plural.png" title="headphone zone" class="text" alt="headphone">
+    </div>
 
-            <div class="navigation-close hover about-close opacity">
-                <div class="navigation-close-line"></div>
-                <div class="navigation-close-line"></div>
-            </div>
+    <div class="social-media-links-navigation">
+      <ul>
+        <li><a href="#" class="text hover opacity">YT</a></li>
+        <li><a href="#" class="text hover opacity">FB</a></li>
+        <li><a href="#" class="text hover opacity">IG</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
 
-            <div class="project-preview"></div>
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bez.js"></script>
+<script src="js/pace.js"></script>
+<script src="js/index.js"></script>
 
-            <div class="headphone-navigation opacity">
-                <img src="images/no-bg-plural.png" title="headphone zone" class="text" alt="headphone">
-            </div>
+<!-- ✅ Mobile Menu JS -->
+<script>
+  document.querySelector('.menu-bar').addEventListener('click', function () {
+    document.querySelector('.navigation-content').classList.add('open');
+  });
 
-            <div class="social-media-links-navigation">
-                <ul>
-                    <li><a href="#" class="text hover opacity">YT</a></li>
-                    <li><a href="#" class="text hover opacity">FB</a></li>
-                    <li><a href="#" class="text hover opacity">IG</a></li>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bez.js"></script>
-    <script src="js/pace.js"></script>
-    <script src="js/index.js"></script>
+  document.querySelector('.navigation-close').addEventListener('click', function () {
+    document.querySelector('.navigation-content').classList.remove('open');
+  });
+</script>
 </body>
 </html>

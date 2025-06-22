@@ -10,12 +10,29 @@
   <link rel="icon" type="image/png" href="images/plural.png" />
   <link rel="stylesheet" href="css/index.css" />
   <style>
-    /* You can also move this to your index.css file */
     #message {
       color: red;
       font-size: 14px;
       display: none;
       margin-top: 10px;
+    }
+
+    /* ✅ Mobile menu fix */
+    .navigation-content {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: black;
+      z-index: 999;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+      pointer-events: auto;
+    }
+
+    .navigation-content.open {
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -28,17 +45,17 @@
   <div id="preloader">
     <div class="p">
       <img src="images/no-bg-plural.png" alt="headphone">
-      Malsyian Culture Arts
+       Malaysian Cultural Arts
     </div>
   </div>
 
   <div id="contact-one-content">
 
     <div class="navigation">
-      <div class="logo hover ">
+      <div class="logo hover">
         <a href="index-two.html" class="text">PLURAL</a>
       </div>
-      <div class="menu-bar hover ">
+      <div class="menu-bar hover">
         <div class="menu-bar-name text">Menu</div>
         <div class="menu-bar-lines text">
           <div class="menu-bar-line"></div>
@@ -93,10 +110,10 @@
     <div class="navigation-logo hover opacity">
       <a href="#" class="text">PLURAL</a>
     </div>
-    <ul class="navigation-ul">
+ <ul class="navigation-ul">
       <li><a href="index-one.html" data-text="Home" data-img="images/home-nav.jpg">Home</a></li>
       <li><a href="about-one.html" data-text="About" data-img="images/about-nav.jpg">About</a></li>
-      <li><a href="songs-one.html" data-text="Arts" data-img="images/arts-nav.jpg">Arts</a></li>
+      <li><a href="arts.html" data-text="Arts" data-img="images/arts-nav.jpg">Arts</a></li>
       <li><a href="blog-one.html" data-text="Blogs" data-img="images/blog-nav.jpg">Blogs</a></li>
       <li><a href="contact-one.html" data-text="Contact" data-img="images/con-nav.jpg">Contact</a></li>
     </ul>
@@ -130,7 +147,7 @@
 <script src="js/index.js"></script>
 
 <script>
-// Corrected JS for Send button functionality
+// Form button to mailto
 document.getElementById("submit").addEventListener("click", function () {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -148,6 +165,15 @@ document.getElementById("submit").addEventListener("click", function () {
   const mailtoLink = `mailto:dacern888@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + body)}`;
 
   window.location.href = mailtoLink;
+});
+
+// ✅ Mobile menu toggle logic
+document.querySelector('.menu-bar').addEventListener('click', function () {
+  document.querySelector('.navigation-content').classList.add('open');
+});
+
+document.querySelector('.navigation-close').addEventListener('click', function () {
+  document.querySelector('.navigation-content').classList.remove('open');
 });
 </script>
 

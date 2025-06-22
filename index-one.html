@@ -52,7 +52,6 @@
       height: 100px;
     }
 
-    /* ✅ Bottom-left horizontal links */
     #social-media-links-bottom {
       position: fixed;
       bottom: 20px;
@@ -88,6 +87,33 @@
     .project-preview {
       pointer-events: none !important;
     }
+
+    .navigation-content {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #000;
+      z-index: 9999;
+      pointer-events: auto;
+      transition: all 0.4s ease;
+      opacity: 0;
+    }
+
+    .navigation-content.open {
+      top: 0;
+      opacity: 1;
+    }
+
+    .navigation-content ul li {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .navigation-content.open ul li {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -98,7 +124,7 @@
     <div id="preloader">
       <div class="p">
         <img src="images/no-bg-plural.png" alt="headphone" />
-        Malsyian Culture Arts
+       Malaysian Cultural Arts
       </div>
     </div>
 
@@ -110,7 +136,7 @@
       <div class="logo hover">
         <a href="#" class="text">PLURAL</a>
       </div>
-      <div class="menu-bar hover">
+      <div class="menu-bar hover" id="menuToggle">
         <div class="menu-bar-name text">Menu</div>
         <div class="menu-bar-lines text">
           <div class="menu-bar-line"></div>
@@ -120,29 +146,6 @@
     </div>
 
     <div id="header">
-      <div class="navigation">
-        <div class="logo hover">
-          <a href="#" class="text">PLURAL</a>
-        </div>
-        <div class="menu-bar hover">
-          <div class="menu-bar-name text">Menu</div>
-          <div class="menu-bar-lines text">
-            <div class="menu-bar-line"></div>
-            <div class="menu-bar-line"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ✅ Social media links at bottom left, horizontal -->
-      <div id="social-media-links-bottom">
-        <ul>
-          <li><a href="https://instagram.com/dacernn" target="_blank">IG</a></li>
-          <li><a href="https://instagram.com/dacernn" target="_blank">FB</a></li>
-          <li><a href="https://instagram.com/dacernn" target="_blank">YT</a></li>
-        </ul>
-      </div>
-
-
       <div class="new-release img text">
         <img src="images/bg-index.jpg" alt="new-release" />
         <div class="song-details">
@@ -158,24 +161,42 @@
       </div>
     </div>
 
-    <div class="navigation-content">
+    <div class="navigation-content" id="navContent">
       <div class="navigation-logo hover opacity">
         <a href="#" class="text">PLURAL</a>
       </div>
       <ul class="navigation-ul">
-        <li><a href="index-one.html" data-text="Home" data-img="images/home-nav.jpg">Home</a></li>
-        <li><a href="about-one.html" data-text="About" data-img="images/about-nav.jpg">About</a></li>
-        <li><a href="arts.html" data-text="Arts" data-img="images/arts-nav.jpg">Arts</a></li>
-        <li><a href="blog-one.html" data-text="Blogs" data-img="images/blog-nav.jpg">Blogs</a></li>
-        <li><a href="contact-one.html" data-text="Contact" data-img="images/con-nav.jpg">Contact</a></li>
+        <li><a href="index-one.html">Home</a></li>
+        <li><a href="about-one.html">About</a></li>
+        <li><a href="arts.html">Arts</a></li>
+        <li><a href="blog-one.html">Blogs</a></li>
+        <li><a href="contact-one.html">Contact</a></li>
       </ul>
-      <div class="navigation-close hover about-close opacity">
+      <div class="navigation-close hover about-close opacity" id="menuClose">
         <div class="navigation-close-line"></div>
         <div class="navigation-close-line"></div>
       </div>
       <div class="project-preview"></div>
     </div>
+
+    <div id="social-media-links-bottom">
+      <ul>
+        <li><a href="https://instagram.com/dacernn" target="_blank">IG</a></li>
+        <li><a href="https://instagram.com/dacernn" target="_blank">FB</a></li>
+        <li><a href="https://instagram.com/dacernn" target="_blank">YT</a></li>
+      </ul>
+    </div>
   </main>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navContent').classList.add('open');
+    });
+
+    document.getElementById('menuClose').addEventListener('click', function() {
+      document.getElementById('navContent').classList.remove('open');
+    });
+  </script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/bez.js"></script>
